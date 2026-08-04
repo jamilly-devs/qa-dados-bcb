@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "id": "7ffad0e1-eda3-47f9-99ff-09662f64a8d9",
+      "kwargs": {
+        "column": "valor"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "dd48a411-ff35-459b-9cb9-967b95ba3eb1",
+      "kwargs": {
+        "column": "valor",
+        "type_": "float64"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "f77ff0fa-6c05-46de-92ab-f3d39a158d7d",
+      "kwargs": {
+        "column": "data"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "e3a76fd7-b697-4c3f-8191-0032b0ea6fba",
+      "kwargs": {
+        "column": "data"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "2566e797-9877-4ea6-9aeb-c082a933510c",
+      "kwargs": {
+        "column": "valor",
+        "max_value": 15.0,
+        "min_value": -5.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "d706d427-3d20-4dfd-b160-609ce5fde5c5",
+      "kwargs": {
+        "value": 558
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_row_count_to_equal"
+    },
+    {
+      "id": "161966b3-0d2d-4eaa-90a1-e054389cfa9d",
+      "kwargs": {
+        "column": "data",
+        "max_value": "2026-07-27T19:17:15.727936"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "f9155de8-5793-4e06-bea1-300998f9e50a",
+  "meta": {
+    "great_expectations_version": "1.19.1"
+  },
+  "name": "ipca_qualidade",
+  "notes": null
+}

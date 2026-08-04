@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "id": "df672cad-74a2-49b0-8074-3cea4b2ae81b",
+      "kwargs": {
+        "column": "valor"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "c6aadbe6-9638-48a0-9523-528fe414659c",
+      "kwargs": {
+        "column": "valor",
+        "type_": "float64"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "b025cf2e-a094-4b17-bec7-d83845c96770",
+      "kwargs": {
+        "column": "data"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3eaa3de7-7623-4b23-86e6-f4d176a49081",
+      "kwargs": {
+        "column": "data"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "14077047-a8d1-42b8-b985-a0b1f0ccac20",
+      "kwargs": {
+        "column": "valor",
+        "max_value": 0.2,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "b5ac37ff-25b9-46c3-8f69-db08c7df7eef",
+      "kwargs": {
+        "max_value": 2608,
+        "min_value": 2347
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    },
+    {
+      "id": "e2f169bf-9295-47d7-89b8-ccd83c08dbb0",
+      "kwargs": {
+        "column": "data",
+        "max_value": "2026-08-04T10:37:21.571733"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "a76c0ebf-801f-49c7-8c40-a23416851447",
+  "meta": {
+    "great_expectations_version": "1.19.1"
+  },
+  "name": "selic_qualidade",
+  "notes": null
+}

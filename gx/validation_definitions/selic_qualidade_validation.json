@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "f93fa93c-c55a-432e-8eb2-e603959ac02f",
+      "name": "selic_limpo"
+    },
+    "batch_definition": {
+      "id": "6aef5fa3-f2bd-485b-8e94-1403a80e059b",
+      "name": "selic_limpo_batch"
+    },
+    "datasource": {
+      "id": "a2621188-fa25-44d8-b996-ae987c708efd",
+      "name": "selic_source"
+    }
+  },
+  "id": "9d059a3a-2a44-4ed2-92dd-34e13d1fd191",
+  "name": "selic_qualidade_validation",
+  "suite": {
+    "id": "a76c0ebf-801f-49c7-8c40-a23416851447",
+    "name": "selic_qualidade"
+  }
+}

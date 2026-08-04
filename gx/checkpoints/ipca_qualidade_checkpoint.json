@@ -1,0 +1,18 @@
+{
+  "actions": [
+    {
+      "name": "update_data_docs",
+      "site_names": [],
+      "type": "update_data_docs"
+    }
+  ],
+  "id": "b6784465-bfaf-4199-829e-9dd9ebafa978",
+  "name": "ipca_qualidade_checkpoint",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "fbe0ab97-468f-4f26-b2ec-35ce8d072bce",
+      "name": "ipca_qualidade_validation"
+    }
+  ]
+}

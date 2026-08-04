@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "1fb1cfeb-27d3-4e34-b462-01f08baef829",
+      "name": "ipca_limpo"
+    },
+    "batch_definition": {
+      "id": "f793779d-d027-449e-9ff2-3e3d0a77cf62",
+      "name": "ipca_limpo_batch"
+    },
+    "datasource": {
+      "id": "946ada87-ce0b-48c1-888b-3a7532b03aca",
+      "name": "ipca_source"
+    }
+  },
+  "id": "fbe0ab97-468f-4f26-b2ec-35ce8d072bce",
+  "name": "ipca_qualidade_validation",
+  "suite": {
+    "id": "f9155de8-5793-4e06-bea1-300998f9e50a",
+    "name": "ipca_qualidade"
+  }
+}
