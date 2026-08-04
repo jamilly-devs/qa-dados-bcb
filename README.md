@@ -10,7 +10,7 @@ Depois de fechar isso pro IPCA, repeti o mesmo processo pra outra série do
 BCB, a Selic (série 11), pra ver se o que eu tinha montado fazia sentido de
 verdade ou se só "funcionava por sorte" com uma série só.
 
-Não é um projeto perfeito nem "pronto para produção" — é material de estudo
+Não é um projeto perfeito nem "pronto para produção", é material de estudo
 mesmo, e ainda estou aprendendo boa parte do que tem aqui.
 
 ## O que o projeto faz
@@ -27,13 +27,13 @@ São três passos, cada um em um script:
    gera um relatório (Data Docs) mostrando o que passou e o que falhou.
 
 Tem também um `setup_gx_datasource.py`, que foi o primeiro script que escrevi
-só pra entender como o Great Expectations lê um CSV — deixei ele aqui como
+só pra entender como o Great Expectations lê um CSV, deixei ele aqui como
 registro dos primeiros passos.
 
 ### Depois, repeti o processo com a Selic (série 11)
 
 A série 11 do BCB é a taxa Selic, só que **diária** e em **percentual ao
-dia**, não ao ano — isso me confundiu no começo, porque a Selic que a gente
+dia**, não ao ano, isso me confundiu no começo, porque a Selic que a gente
 vê no noticiário é sempre a taxa anual (tipo "13,75% ao ano"). Os valores
 dessa série são bem pequenos (tipo 0.05), porque é o percentual de um dia só.
 
@@ -84,10 +84,10 @@ A regra 5 espera que o valor mensal do IPCA fique entre -5 e 15. Quando rodei
 a suite pela primeira vez, ela falhava pra vários meses antigos, lá do fim
 dos anos 80 e começo dos 90. No começo achei que tinha errado a regra, mas
 pesquisando descobri que aquele período foi de hiperinflação no Brasil, com o
-IPCA mensal passando de 80% em alguns meses — bem antes do Plano Real (1994),
+IPCA mensal passando de 80% em alguns meses, bem antes do Plano Real (1994),
 que foi quando a inflação começou a ficar mais estável.
 
-Ou seja: a regra "falhar" ali não é um bug, é ela fazendo o que deveria —
+Ou seja: a regra "falhar" ali não é um bug, é ela fazendo o que deveria
 avisando que aqueles valores fogem muito do padrão que eu defini pensando no
 Brasil pós-Plano Real. Decidi deixar assim de propósito, em vez de ampliar o
 range só pra "passar tudo", porque achei um achado interessante pra registrar.
@@ -99,16 +99,16 @@ IPCA (valor e data não nulos, data não duplicada, data não no futuro, etc.).
 Duas coisas mudaram em relação ao IPCA:
 
 - **O range de valor** ficou entre 0 e 0.2, já que aqui o valor é a Selic
-  diária em percentual (não anual) — expliquei isso melhor lá em cima.
+  diária em percentual (não anual), expliquei isso melhor lá em cima.
 - **A regra de "não pode faltar linha"** não deu pra copiar igual do IPCA.
   No IPCA eu comparava a quantidade de linhas com a quantidade de meses
   esperados, porque é uma série mensal. A Selic é por dia útil, e a
-  quantidade de dias úteis muda todo ano por causa dos feriados nacionais —
+  quantidade de dias úteis muda todo ano por causa dos feriados nacionais
   o pandas sozinho não sabe quais dias são feriado, só sabe tirar fim de
   semana. Então, em vez de exigir um número exato de linhas, deixei uma
   margem de 10% pra cima/baixo da contagem de dias úteis do período.
 
-Diferente do IPCA, aqui as 7 regras passaram todas — não achei nenhum
+Diferente do IPCA, aqui as 7 regras passaram todas, não achei nenhum
 comportamento inesperado na Selic dos últimos 10 anos (que foi o período que
 consegui puxar, por causa do limite da API pra séries diárias).
 
@@ -117,13 +117,13 @@ consegui puxar, por causa do limite da API pra séries diárias).
 Criei uma pasta `tests/` com `test_qualidade_dados.py`, com uma função de
 teste pra cada suite (`test_ipca_qualidade` e `test_selic_qualidade`). Cada
 uma roda o checkpoint do Great Expectations correspondente e faz o teste
-falhar se alguma regra não passar — igual eu já fazia no Cypress/Jest, só
+falhar se alguma regra não passar igual eu já fazia no Cypress/Jest, só
 que aqui quem roda por baixo é o Great Expectations, não uma asserção minha.
 
 Uma exceção: no `test_ipca_qualidade`, a regra do range de valor (a que
 falha de propósito nos meses de hiperinflação) é ignorada só na hora de
 decidir se o teste do pytest quebra ou não. A suite continua rodando essa
-regra normalmente e o Data Docs continua mostrando a falha real — só não
+regra normalmente e o Data Docs continua mostrando a falha real só não
 quero que o pytest fique vermelho por causa de um achado que já sei que é
 esperado.
 
@@ -134,6 +134,5 @@ esperado.
 - Ver como automatizar a execução dos três scripts em sequência.
 - Aprender a interpretar melhor o Data Docs gerado.
 
-Se algo aqui estiver com nome de variável estranho, comentário incompleto ou
-jeito de fazer que não é o mais "certo", é bem provável que seja porque eu
-ainda estava testando/aprendendo aquele trecho.
+Ainda to aprendendo bastante, então se tiver alguma parte meio torta ou que 
+dava pra fazer diferente, é porque realmente ainda tô entendendo esses conceitos.
